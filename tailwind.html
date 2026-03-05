@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro - Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[url('assets/img/bg.jpg')] bg-cover bg-center bg-fixed">
+
+    <div class="fixed bottom-4 right-4 z-50">
+        <a href="index.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-5 rounded-full shadow-lg transition-colors text-sm flex items-center">
+            <i class="fa-brands fa-bootstrap mr-2 text-lg"></i>Ver versión Bootstrap
+        </a>
+    </div>
+
+    <nav class="bg-transparent py-4 w-full">
+        <div class="container mx-auto px-4 lg:px-20 flex justify-between items-center">
+            <a href="#" class="font-bold rounded-full flex items-center justify-center w-[45px] h-[45px] bg-[#e0f0fd] text-[#2a73c5] text-lg">
+                NC
+            </a>
+            
+            <div class="hidden lg:flex items-center gap-6">
+                <a href="#" class="text-gray-800 font-medium hover:text-[#2a73c5] transition-colors">Inicio</a>
+                <a href="#" class="text-gray-800 font-medium hover:text-[#2a73c5] transition-colors">Servicios</a>
+                <a href="#" class="text-gray-800 font-medium hover:text-[#2a73c5] transition-colors">Nosotros</a>
+                <a href="#" class="text-gray-800 font-medium hover:text-[#2a73c5] transition-colors">Contacto</a>
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition-colors text-sm">Registro</a>
+            </div>
+            
+            <button class="lg:hidden text-gray-800 text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="flex-grow flex justify-center items-center py-6">
+        <div class="bg-white/60 backdrop-blur-md p-4 rounded-[1.5rem] shadow-2xl max-w-[480px] w-full mx-4">
+            <div class="bg-white rounded-2xl p-8 text-center">
+                
+                <h2 class="text-[#2a73c5] font-bold text-2xl mb-1">Formulario de Registro</h2>
+                <p class="text-gray-500 text-sm mb-6">Crea tu cuenta completando tus datos.</p>
+
+                <form class="text-left">
+                    <div class="mb-3">
+                        <label class="block text-gray-800 text-xs font-bold mb-1">Nombre Completo</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                            <input type="text" class="w-full pl-10 pr-4 py-2 bg-white border-2 border-sky-400 text-gray-700 rounded-full text-sm focus:outline-none" value="Mateo Garcia Rios" placeholder="Nombre Completo">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="block text-gray-800 text-xs font-bold mb-1">Correo Electrónico</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                            <input type="email" class="w-full pl-10 pr-4 py-2 bg-slate-100 border-2 border-transparent focus:bg-white focus:border-sky-400 text-gray-700 rounded-full text-sm focus:outline-none transition-colors" value="mateo.garcia@email.com" placeholder="Correo Electrónico">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="block text-gray-800 text-xs font-bold mb-1">Contraseña</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                            <input type="password" class="w-full pl-10 pr-4 py-2 bg-slate-100 border-2 border-transparent focus:bg-white focus:border-sky-400 text-gray-700 rounded-full text-sm focus:outline-none transition-colors" value="12345678" placeholder="Contraseña">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="block text-gray-800 text-xs font-bold mb-1">Confirmar Contraseña</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                            <input type="password" class="w-full pl-10 pr-4 py-2 bg-slate-100 border-2 border-transparent focus:bg-white focus:border-sky-400 text-gray-700 rounded-full text-sm focus:outline-none transition-colors" value="12345678" placeholder="Confirmar Contraseña">
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <label class="block text-gray-800 text-xs font-bold mb-1">Teléfono Celular</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                            <input type="tel" class="w-full pl-10 pr-4 py-2 bg-slate-100 border-2 border-transparent focus:bg-white focus:border-sky-400 text-gray-700 rounded-full text-sm focus:outline-none transition-colors" value="+52 55 1234 5678" placeholder="Teléfono Celular">
+                        </div>
+                    </div>
+
+                    <div class="flex items-start mb-5 text-xs text-gray-500">
+                        <input type="checkbox" id="terms" class="mt-0.5 mr-2 cursor-pointer">
+                        <label for="terms">
+                            He leído y acepto los <a href="#" class="text-[#0b5b9e] font-semibold hover:underline">Términos y Condiciones</a> y la <a href="#" class="text-[#0b5b9e] font-semibold hover:underline">Política de Privacidad</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-full shadow-md transition-colors text-sm mb-4">
+                        REGISTRARSE
+                    </button>
+
+                    <p class="text-center text-xs text-gray-500 mb-0">
+                        ¿Ya tienes cuenta? <a href="#" class="text-[#0b5b9e] font-bold hover:underline">Inicia Sesión</a>
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4 mt-auto w-full">
+        <div class="text-xs text-gray-800 font-medium">
+            <p class="mb-1">Desarrollado por: <strong>Gael Quiroz Bautista</strong></p>
+            <p class="mb-1">Ingeniería en Sistemas Computacionales | Tecnológico Nacional de México, Campus Pachuca</p>
+            <p class="text-gray-600">&copy; 2026 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
