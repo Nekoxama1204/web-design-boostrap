@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Fondo con tu imagen */
+    background: url('../img/bg.jpg') center/cover no-repeat fixed;
+}
+
+/* Contenedor tipo vidrio esmerilado detrás de la tarjeta */
+.form-backdrop {
+    background: linear-gradient(135deg, rgba(235, 245, 255, 0.8), rgba(220, 250, 240, 0.6));
+    padding: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    max-width: 480px;
+    width: 100%;
+    margin: 1rem;
+}
+
+/* Tarjeta principal blanca */
+.form-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+}
+
+/* Título */
+.form-title {
+    color: #2a73c5; /* Azul similar al de la imagen */
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+label.form-label {
+    margin-bottom: 0.25rem;
+    font-size: 0.85rem;
+    color: #333 !important;
+}
+
+/* Inputs y Contenedores */
+.input-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8fa0b3;
+    font-size: 0.9rem;
+    z-index: 10;
+}
+
+.custom-input {
+    padding-left: 2.6rem;
+    border-radius: 50rem; /* Borde redondeado estilo pastilla */
+    background-color: #f0f4f8; /* Gris claro */
+    border: 2px solid transparent;
+    font-size: 0.9rem;
+    color: #495057;
+    box-shadow: none !important;
+    transition: all 0.3s ease;
+}
+
+/* Estado Focus (Como el campo "Nombre Completo" en tu imagen) */
+.custom-input:focus,
+.active-input {
+    background-color: #ffffff;
+    border-color: #2db7e0; /* Borde azul claro */
+    outline: none;
+}
+
+/* Checkbox */
+.custom-checkbox {
+    cursor: pointer;
+    margin-top: 0.2rem;
+}
+
+/* Enlaces (Términos y Condiciones) */
+.custom-link {
+    color: #0b5b9e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.custom-link:hover {
+    color: #063d6b;
+    text-decoration: underline;
+}
+
+/* Botón de Registro */
+.custom-btn {
+    background-color: #1a73e8; /* Azul estándar */
+    border-color: #1a73e8;
+    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.custom-btn:hover {
+    background-color: #155dbb;
+    border-color: #155dbb;
+}
