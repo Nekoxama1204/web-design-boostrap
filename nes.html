@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Retro NES</title>
+    
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        /* Ajustes base para que la fuente pixelada no sea gigante y el fondo contraste */
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #212529; /* Fondo oscuro tipo arcade */
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-size: 12px; /* Reducimos el tamaño base porque esta fuente es muy ancha */
+        }
+
+        .main-wrapper {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        .retro-card {
+            background-color: #fff;
+            color: #212529;
+            max-width: 550px;
+            width: 100%;
+            padding: 1.5rem;
+        }
+
+        /* Separación de campos */
+        .nes-field {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Enlaces retro */
+        .retro-link {
+            color: #209cee;
+            text-decoration: none;
+        }
+        .retro-link:hover {
+            color: #105b8e;
+        }
+
+        /* Ajuste de footer y navbar */
+        .footer-text, .nav-text {
+            font-size: 10px;
+            line-height: 1.8;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav style="padding: 1rem; background-color: #000; border-bottom: 4px solid #fff;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <span class="nes-text is-primary" style="font-size: 16px;">[ NC ]</span>
+            <div class="nav-text" style="display: flex; gap: 15px;">
+                <a href="#" class="retro-link">INICIO</a>
+                <a href="#" class="retro-link">SERVICIOS</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <div class="nes-container with-title is-centered retro-card">
+            <p class="title" style="font-size: 14px; margin-bottom: -10px;">REGISTRO JUGADOR</p>
+            
+            <p style="margin-bottom: 25px; color: #767676;">Crea tu cuenta ahora.</p>
+
+            <form style="text-align: left;">
+                <div class="nes-field">
+                    <label for="name_field"><i class="fa-solid fa-user"></i> Nombre Completo</label>
+                    <input type="text" id="name_field" class="nes-input" value="Mateo Garcia Rios">
+                </div>
+
+                <div class="nes-field">
+                    <label for="email_field"><i class="fa-solid fa-envelope"></i> Correo Electrónico</label>
+                    <input type="email" id="email_field" class="nes-input" value="mateo.garcia@email.com">
+                </div>
+
+                <div class="nes-field">
+                    <label for="password_field"><i class="fa-solid fa-lock"></i> Contraseña</label>
+                    <input type="password" id="password_field" class="nes-input" value="12345678">
+                </div>
+
+                <div class="nes-field">
+                    <label for="confirm_field"><i class="fa-solid fa-lock"></i> Confirmar Contraseña</label>
+                    <input type="password" id="confirm_field" class="nes-input" value="12345678">
+                </div>
+
+                <div class="nes-field">
+                    <label for="phone_field"><i class="fa-solid fa-phone"></i> Teléfono Celular</label>
+                    <input type="tel" id="phone_field" class="nes-input" value="+52 55 1234 5678">
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <label>
+                        <input type="checkbox" class="nes-checkbox" />
+                        <span style="font-size: 10px; line-height: 1.5;">
+                            Acepto <a href="#" class="retro-link">Términos</a> y <a href="#" class="retro-link">Privacidad</a>
+                        </span>
+                    </label>
+                </div>
+
+                <button type="submit" class="nes-btn is-primary" style="width: 100%; margin-bottom: 15px;">
+                    START / REGISTRARSE
+                </button>
+
+                <p style="text-align: center; font-size: 10px; margin-bottom: 0;">
+                    ¿Ya tienes cuenta? <a href="#" class="retro-link">Inicia Sesión</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <div style="position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 100;">
+        <a href="index.html" class="nes-btn is-warning" style="font-size: 10px;">> BOOTSTRAP</a>
+        <a href="tailwind.html" class="nes-btn is-success" style="font-size: 10px;">> TAILWIND</a>
+    </div>
+
+    <footer style="padding: 20px; background-color: #000; border-top: 4px solid #fff;">
+        <div class="footer-text">
+            <p style="margin-bottom: 5px;">DEV: <span class="nes-text is-warning">GAEL QUIROZ BAUTISTA</span></p>
+            <p style="margin-bottom: 5px;">ING. SISTEMAS COMPUTACIONALES | TECNM CAMPUS PACHUCA</p>
+            <p style="color: #767676;">(C) 2026 GAME OVER.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
